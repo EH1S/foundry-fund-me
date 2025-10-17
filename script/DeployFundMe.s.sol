@@ -8,12 +8,12 @@ import {HelperConfig} from "./HelperConfig.s.sol";
 contract DeployFundMe is Script {
     function run() external returns (FundMe) {
         HelperConfig helperConfig = new HelperConfig();
-        address ethUsdPriceFeed = helperConfig.activeNetworkConfig(); // ✅ get the price feed
+        address ethUsdPriceFeed = helperConfig.activeNetworkConfig(); // get the price feed
 
         vm.startBroadcast();
-        FundMe fundMe = new FundMe(ethUsdPriceFeed); // ✅ pass the price feed
+        FundMe fundMe = new FundMe(ethUsdPriceFeed); //  pass the price feed
         vm.stopBroadcast();
 
-        return fundMe; // ✅ return it
+        return fundMe; //  return it
     }
 }

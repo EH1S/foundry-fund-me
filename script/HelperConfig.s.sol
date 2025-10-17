@@ -26,7 +26,7 @@ contract HelperConfig is Script {
     }
 
     function getSepoliaEthConfig() public pure returns (NetworkConfig memory) {
-        // ✅ Chainlink ETH/USD Price Feed on Sepolia
+        // Chainlink ETH/USD Price Feed on Sepolia
         return NetworkConfig({priceFeed: 0x694AA1769357215DE4FAC081bf1f309aDC325306});
     }
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.19;
+pragma solidity ^0.8.19;
 
 import {Test, console} from "forge-std/Test.sol";
 import {ZkSyncChainChecker} from "lib/foundry-devops/src/ZkSyncChainChecker.sol";
@@ -12,7 +12,7 @@ contract ZkSyncDevOps is Test, ZkSyncChainChecker, FoundryZkSyncChecker {
         address ripemd = address(uint160(3));
 
         bool success;
-        // Don't worry about what this "assembly" thing is for now
+        
         assembly {
             success := call(gas(), ripemd, 0, 0, 0, 0, 0)
         }

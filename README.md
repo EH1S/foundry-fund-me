@@ -13,6 +13,44 @@ Foundry consists of:
 
 https://book.getfoundry.sh/
 
+
+# Foundry Fund Me 🏦
+
+A Solidity smart contract project built with Foundry that allows users to fund ETH and only the contract owner to withdraw — complete with tests, scripts, and mocks.
+
+---
+
+## 📦 Features
+
+- `FundMe` contract:  
+  - Users can fund with ETH  
+  - Requires a minimum USD-equivalent amount (via Chainlink price feed)  
+  - Only owner can withdraw funds  
+  - Includes a more gas-efficient `cheaperWithdraw` variant  
+
+- **Testing** with Forge:  
+  - Mock price feed (MockV3Aggregator)  
+  - Tests covering funding, withdrawals, edge cases (insufficient funds, multiple funders)  
+
+- **Deployment script**  
+  - `DeployFundMe.s.sol` uses `HelperConfig` for network-specific price feed addresses  
+  - Supports local/forked/testing & live networks  
+
+- **Formatting / linting / CI**  
+  - `forge fmt` enforced in GitHub Actions  
+  - Code style consistency  
+
+---
+
+## 🧪 Setup & Usage
+
+### 1. Clone
+
+```bash
+git clone https://github.com/EH1S/foundry-fund-me.git
+cd foundry-fund-me
+
+
 ## Usage
 
 ### Build

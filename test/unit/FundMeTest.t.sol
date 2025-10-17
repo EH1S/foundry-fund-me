@@ -14,8 +14,8 @@ contract FundMeTest is Test {
     uint256 constant GAS_PRICE = 1;
 
     function setUp() external {
-        DeployFundMe deployFundMe = new DeployFundMe(); // ✅ parentheses added
-        fundMe = deployFundMe.run(); // ✅ correct instance call
+        DeployFundMe deployFundMe = new DeployFundMe(); 
+        fundMe = deployFundMe.run(); 
         vm.deal(USER, STARTING_BALANCE);
     }
 
